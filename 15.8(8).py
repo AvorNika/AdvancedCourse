@@ -1,5 +1,5 @@
 # раздел 15.8 Анонимные функции, задание 8
-is_num = lambda num: num.replace('.', '', 1)
+is_num = lambda num: True if num.find('-') <= 0 and num.replace('.', '', 1).replace('-', '', 1).isdigit() else False
 
 print(is_num('10.34ab'))
 print(is_num('10.45'))
